@@ -7,14 +7,15 @@ interface Names {
 const { title, subtitle } = Astro.props
 
 ---
-<section class="relative flex flex-col items-center text-white">
-    <slot name="img"/>
-    <div class="absolute w-full bottom-5">
-        <h3 class="font-bold text-[30px]">{title}</h3>
-        <p class="text-[14px]">{subtitle}</p>
-        <section class="flex justify-center gap-2">
-            <button class="py-1 text-sm px-2 rounded-full bg-[#0050EF]">Saber más</button>
-            <button class="text-sm">Agregar a Calendar {">"}</button>
+
+    <div class="relative flex flex-col items-center text-white">
+        <slot name="img"/>
+        <div class="absolute w-full bottom-5 space-y-1">
+            <h3 class="font-bold text-3xl">{title}</h3>
+        <p class="text-sm">{subtitle}</p>
+        <section class="flex justify-center items-center gap-3">
+            <button class="py-1 text-sm px-2 rounded-full bg-primary transition-all duration-150 hover:opacity-80">Saber más</button>
+            <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento" class="text-sm hover:opacity-80 transition-all duration-150">Agregar a Calendar {">"}</a>
         </section>
     </div>
-</section>
+</div>

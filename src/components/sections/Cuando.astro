@@ -1,22 +1,48 @@
 ---
 import SectionContainer from "../SectionContainer.astro"
 import CardStructure from "./CuandoCardStructure.astro"
+// Fecha actual
+const fechaActual = new Date();
+
+// Fecha específica (27 de abril de 2024, 23:59:59 UTC)
+const fechaEspecifica = new Date('2024-04-27T23:59:59Z');
+
+// Calcular la diferencia en milisegundos entre las dos fechas
+const diferenciaEnMillisegundos = fechaEspecifica.getTime() - fechaActual.getTime();
+
+// Convertir la diferencia a días
+const diasDiferencia = Math.floor(diferenciaEnMillisegundos / (1000 * 60 * 60 * 24));
+
+// Calcular meses, semanas y días
+const meses = Math.floor(diasDiferencia / 30); // Usamos 30 días como un mes promedio
+const semanas = Math.floor((diasDiferencia % 30) / 7);
+const dias = diasDiferencia % 7;
+
+function format(value: number){
+    return value<10?`0${value}`:value;
+}
 ---
 <SectionContainer bgColor="bg-black">
-    <CardStructure subtitle="¿Cuándo?"
-    description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos verte feliz junto a nosotros ☺️" gradient={true}>
-        <img slot="img" src="/img/img-3-pareja.png" alt="">
-        <h2 class="text-[32px] font-medium" slot="title">
-            Nos casaremos el <span class="text-[#FBFF2A]"> 27 de Abril de 2024</span>
-        </h2>
+    <CardStructure 
+        subtitle="¿Cuándo?"
+        title="Nos casaremos el"
+        description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos que la pases bien a nuestro lado ☺️"
+    >
+        <img class="w-full" slot="img" src="/img/img-3-pareja.png" alt="">
+        <span slot="span" class="text-[#FBFF2A]"> 27 de Abril de 2024</span>
         <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2"></section>
     </CardStructure>
-    <div>
-        <button class="px-8 py-4 bg-[#5D50C6] rounded-full text-white">Agregar evento en Google Calendar</button>
-        <ul class="flex justify-around w-full text-white">
-            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">70</h3><p class="text-xl">días</p></li>
-            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">10</h3><p class="text-xl">semanas</p></li>
-            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">02</h3><p class="text-xl">meses</p></li>
-        </ul>
+    <div class="space-y-10">
+        <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento" class="text-sm ps:text-base px-4 py-3 bg-secondary rounded-full hover:opacity-85 transition-all duration-150 text-white">Agregar evento en Google Calendar</a>
+        <section>
+            <h3 class="text-black text-sm text-center tracking-wide w-24 m-auto bg-white rounded-full mb-3">En espera</h3>
+            <ul class="flex justify-around w-full text-white">
+                <li class="flex flex-col items-center"><h3 class="text-5xl font-sf-medium">{format(meses)}</h3><p class="text-lg">{meses>1?"Meses":"Mes"}</p></li>
+                <li class="flex flex-col items-center"><h3 class="text-5xl font-sf-medium">{format(semanas)}</h3><p class="text-lg">
+                    {semanas>1?"Semanas":"Semana"}</p></li>
+                <li class="flex flex-col items-center"><h3 class="text-5xl font-sf-medium">
+                    {format(dias)}</h3><p class="text-lg">{dias>1?"Días":"Día"}</p></li>
+            </ul>
+        </section>
     </div>
 </SectionContainer>

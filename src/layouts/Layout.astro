@@ -16,9 +16,38 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
-	<body>
+	<body class="font-sf-regular">
 		<slot />
+		<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
 	</body>
 </html>
 <style is:global>
+	@font-face {
+		font-family: 'SFProRegular';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Regular.otf") format("opentype");
+		font-weight: 400;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'SFProMedium';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Medium.otf") format("opentype");
+		font-weight: 500;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'SFProSemibold';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Semibold.otf") format("opentype");
+		font-weight: 600;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'SFProBold';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Bold.otf") format("opentype");
+		font-weight: 700;
+		font-style: normal;
+	}
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+
 </style>

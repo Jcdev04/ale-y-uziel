@@ -5,6 +5,6 @@ interface Card {
 const {bgColor} = Astro.props;
 ---
 
-<div class={`${bgColor} w-[430px] px-5 flex flex-col items-center gap-10 py-4 relative`}>
+<div class={`${bgColor} px-5 flex flex-col items-center gap-10 py-4 relative w-full ps:w-[430px]`}>
     <slot/>
 </div>
