@@ -1,0 +1,20 @@
+---
+interface Names {
+    title: string
+    subtitle: string
+}
+
+const { title, subtitle } = Astro.props
+
+---
+<section class="relative flex flex-col items-center text-white">
+    <slot name="img"/>
+    <div class="absolute w-full bottom-5">
+        <h3 class="font-bold text-[30px]">{title}</h3>
+        <p class="text-[14px]">{subtitle}</p>
+        <section class="flex justify-center gap-2">
+            <button class="py-1 text-sm px-2 rounded-full bg-[#0050EF]">Saber más</button>
+            <button class="text-sm">Agregar a Calendar {">"}</button>
+        </section>
+    </div>
+</section>
