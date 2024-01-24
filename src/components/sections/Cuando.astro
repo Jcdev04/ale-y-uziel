@@ -1,12 +1,22 @@
 ---
-import CardStructure from "./CardStructure.astro"
+import SectionContainer from "../SectionContainer.astro"
+import CardStructure from "./CuandoCardStructure.astro"
 ---
-<section class="bg-black w-[430px] px-5">
+<SectionContainer bgColor="bg-black">
     <CardStructure subtitle="¿Cuándo?"
-    description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos verte feliz junto a nosotros ☺️">
-        <img slot="img" src="../../../public/img/img-3-pareja.png" alt="">
+    description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos verte feliz junto a nosotros ☺️" gradient={true}>
+        <img slot="img" src="/img/img-3-pareja.png" alt="">
         <h2 class="text-[32px] font-medium" slot="title">
             Nos casaremos el <span class="text-[#FBFF2A]"> 27 de Abril de 2024</span>
         </h2>
+        <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2"></section>
     </CardStructure>
-</section>
+    <div>
+        <button class="px-8 py-4 bg-[#5D50C6] rounded-full text-white">Agregar evento en Google Calendar</button>
+        <ul class="flex justify-around w-full text-white">
+            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">70</h3><p class="text-xl">días</p></li>
+            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">10</h3><p class="text-xl">semanas</p></li>
+            <li class="flex flex-col items-center"><h3 class="text-5xl font-medium">02</h3><p class="text-xl">meses</p></li>
+        </ul>
+    </div>
+</SectionContainer>

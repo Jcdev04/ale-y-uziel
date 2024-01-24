@@ -1,0 +1,10 @@
+---
+interface Card {
+    bgColor: string;
+}
+const {bgColor} = Astro.props;
+---
+
+<div class={`${bgColor} w-[430px] px-5 flex flex-col items-center gap-10 py-4 relative`}>
+    <slot/>
+</div>

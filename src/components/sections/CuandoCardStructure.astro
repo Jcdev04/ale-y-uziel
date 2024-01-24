@@ -2,17 +2,18 @@
 interface Titles {
     subtitle: string;
     description: string;
+    gradient: boolean
 }
-const { subtitle, description } = Astro.props;
+const { subtitle, description,gradient } = Astro.props;
+console.log(subtitle, description,gradient)
 ---
 
 <section class="relative">
     <slot name="img"/>
-    <div class="absolute w-full bottom-0 text-white px-4 text-center flex flex-col gap-3 z-20">
+    <div class="absolute w-full bottom-5 text-white px-4 text-center flex flex-col gap-3 z-20">
         <h3 class="text-[20px] font-bold">{subtitle}</h3>
         <slot name="title"/>
         <px class="text-[16px]">{description}</p>
     </div>
-    <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2">
-    <section/>
+    <slot/>
 </section>

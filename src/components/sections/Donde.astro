@@ -1,0 +1,16 @@
+---
+import SectionContainer from "../SectionContainer.astro";
+import CuandoCardStructure from "./CuandoCardStructure.astro";
+---
+
+<SectionContainer>
+        <section class="bg-gradient-to-b from-black to-transparent w-full absolute h-96 top-[-16px]"></section>
+        <CuandoCardStructure subtitle="¿Dónde nos casaremos?" description="Toda la boda se llevara acabo en la hacienda, se encuentra a 30 minutos de Tulancingo, Hgo. y a 40 minutos de la CDMX, La ubicacion se encuentra en el siguiente botón...">
+            <h2 slot="title" class="text-[32px] font-medium">Hacienda San Juan Pueblilla Zempoala, Hgo.</h2>
+            <img slot="img" src="/img/img-4-donde.png" alt="Cuando" />
+        </CuandoCardStructure>
+        <button class="bg-[#5D50C6] rounded-full px-20 py-4 text-white text-[14px]  ">
+            Ir a Google Maps
+        </button>
+    
+</SectionContainer>
