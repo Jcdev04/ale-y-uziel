@@ -1,71 +1,116 @@
 ---
 import SectionContainer from "../SectionContainer.astro"
-import DateCardCarrousel from "./DateCardCarrousel.astro"
 import CardCarrousel from "./DateCardCarrousel.astro"
+const imagesCarrousel = [
+    { 
+        item: "/img/img-2-date.png", 
+        title:"¿Cuándo?",
+        subtitle:"27 de Abril 2024",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento",
+                text: "Agendar en Google Calendar"
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-donde.png", 
+        title:"¿Dónde?",
+        subtitle:"Hacienda San Juan Pueblilla / Zempoala, Hgo.",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "",
+                text: "Ir a Google Maps"
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-pedida.png", 
+        title:"Nuestra historia",
+        subtitle:"Asi fue que nos comprometimos...",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "",
+                text: "Ir a TikTok"
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-saxo.png", 
+        title:"Itinerario",
+        subtitle:"Así será la boda",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-coontigo.png", 
+        title:"¿Contamos contigo?",
+        subtitle:"Aqui puedes confirmar o declinar",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+             }
+        }
+    },
+    { 
+        item: "/img/img-2-dresscode.png", 
+        title:"Dresscode",
+        subtitle:"Código de vestimenta e ideas para vestir",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "",
+                text: "Ir a Pinterest"
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-alojamiento.png", 
+        title:"Alojamiento",
+        subtitle:"¿No tienes donde quedarte? Aquí te ayudamos",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "",
+                text: "Reserva ahora"
+            }
+        }
+    },
+    { 
+        item: "/img/img-2-regalos.png", 
+        title:"Registro de Regalos",
+        subtitle:"Evita repetir tu presente para los novios",
+        buttons:{
+            izquierdaHref: "",
+            derecha:{
+                href: "",
+                text: "Reserva ahora"
+            }
+        }
+    },
+]
 ---
+
+
 <SectionContainer bgColor="bg-black text-center">
-    <div class="m-auto flex flex-col space-y-3 mt-10 text-white">
-        <h2 class="text-xl ps:text-2xl m-auto leading-6 text-balance">
-        ¡Hey, el día se acerca y queremos <span class="font-sf-bold">que celebres con nosotros!</span> 
-        </h2>
-        <p class="text-xs ps:text-sm">¡Esperamos tu confirmación con muchas ganas!</p>
-    </div>
-    <div id="default-carousel" class="relative w-full" data-carousel="slide">
+    
+<div id="default-carousel" class="relative w-full" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative h-56 overflow-hidden rounded-lg md:h-[430px]">
-         <!-- Item 1 -->
-        <div class="text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-date.png"/>
-            </DateCardCarrousel>
-        </div>
-        <!-- Item 2 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-donde.png"/>
-            </DateCardCarrousel>
-
-        </div>
-        <!-- Item 3 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-pedida.png"/>
-            </DateCardCarrousel>
-
-        </div>
-        <!-- Item 4 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-saxo.png"/>
-            </DateCardCarrousel>
-        </div>
-        <!-- Item 5 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-coontigo.png"/>
-            </DateCardCarrousel>
-        </div>
-        <!-- Item 6 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-dresscode.png"/>
-            </DateCardCarrousel>
-        </div>
-         <!-- Item 7 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-alojamiento.png"/>
-            </DateCardCarrousel>
-        </div>
-        <!-- Item 8 -->
-        <div class=" text-white hidden duration-700 ease-in-out" data-carousel-item>
-            <DateCardCarrousel>
-                <img slot="img" src="/img/img-2-regalos.png"/>
-            </DateCardCarrousel>
-        </div>
+    <div class="relative  overflow-hidden rounded-lg h-[390px]">
+         {
+            imagesCarrousel.map((item, index) => (
+                <CardCarrousel key={index} img={item.item} title={item.title} subtitle={item.subtitle} button={item.buttons}/>
+            ))
+         }
     </div>
     <!-- Slider indicators -->
-    <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+    <div class="absolute z-30 flex -translate-x-1/2 bottom-[-20px] left-1/2 space-x-3 rtl:space-x-reverse">
         <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
@@ -74,9 +119,7 @@ import CardCarrousel from "./DateCardCarrousel.astro"
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 6" data-carousel-slide-to="5"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 7" data-carousel-slide-to="6"></button>
         <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8" data-carousel-slide-to="7"></button>
-        <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 8" data-carousel-slide-to="7"></button>
     </div>
-    <!-- Slider controls -->
     <!-- Slider controls -->
     <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
         <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">

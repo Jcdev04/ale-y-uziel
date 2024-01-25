@@ -2,20 +2,26 @@
 interface Names {
     title: string
     subtitle: string
+    img: string
+    buttons : any
 }
 
-const { title, subtitle } = Astro.props
+const { title, subtitle, img,
+    button } = Astro.props
+console.log(button);
 
 ---
-
-    <div class="relative flex flex-col items-center text-white">
-        <slot name="img"/>
-        <div class="absolute w-full bottom-5 space-y-1">
+<div class="w-full h-full hidden duration-200 ease-in-out" data-carousel-item>
+    <div class="w-full h-full relative flex flex-col items-center text-white">
+        <img class="object-cover object-center h-full w-full" src={img} alt="image carousel"/>
+        <div class="z-20 absolute w-full bottom-5 space-y-1">
             <h3 class="font-bold text-3xl">{title}</h3>
-        <p class="text-sm">{subtitle}</p>
-        <section class="flex justify-center items-center gap-3">
-            <button class="py-1 text-sm px-2 rounded-full bg-primary transition-all duration-150 hover:opacity-80">Saber más</button>
-            <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento" class="text-sm hover:opacity-80 transition-all duration-150">Agregar a Calendar {">"}</a>
-        </section>
+            <p class="text-sm">{subtitle}</p>
+            <section class="z-20 flex justify-center items-center gap-3">
+                <a href="" class="py-1 text-sm px-2 rounded-full bg-primary transition-all duration-150 hover:opacity-80">Saber más</a>
+                <a target="_blank" href={button.derecha?.href} class="text-sm hover:opacity-80 transition-all duration-150">{button?.derecha.text}</a>
+            </section>
+        </div>
+        <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2"><section/>
     </div>
 </div>
