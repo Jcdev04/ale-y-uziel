@@ -1,4 +1,8 @@
-<div class="relative w-full ps:w-[430px]">
+---
+import SectionContainer from "./SectionContainer.astro";
+---
+
+<SectionContainer bgColor="bg-gradient-to-bl from-[#E8E8E8] to-[#ededed]">
     <img class="w-full" src="/img/img-1-pareja.png" alt="">
     <section class="z-20 absolute bottom-3 flex flex-col w-full items-center text-white gap-2">
         <h1 class="text-3xl ps:text-4xl tracking-tight">
@@ -8,6 +12,6 @@
         <section class="py-[1px] px-4 border-white border-[1px] rounded-full"><p class="text-lg font-sf-semibold">Ale y Uziel</p></section>
         <p class="font-sf-bold text-small">27/04/2024</p>
     </section>
-    <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2">
+    <section slot="gradient" class="w-full bottom-[-1px] absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2">
     <section/>
-</div>
+</SectionContainer>

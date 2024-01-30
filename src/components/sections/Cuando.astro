@@ -22,18 +22,17 @@ function format(value: number){
     return value<10?`0${value}`:value;
 }
 ---
-<SectionContainer bgColor="bg-black">
     <CardStructure 
         subtitle="¿Cuándo?"
         title="Nos casaremos el"
-        description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos que la pases bien a nuestro lado ☺️"
+        description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos que la pases bien a nuestro lado 😊"
     >
         <img class="w-full" slot="img" src="/img/img-3-pareja.png" alt="">
         <span slot="span" class="text-[#FBFF2A]"> 27 de Abril de 2024</span>
-        <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2"></section>
+        <section class="w-full bottom-0 absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2"></section>
     </CardStructure>
     <div class="space-y-10">
-        <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento" class="text-sm ps:text-base px-4 py-3 bg-secondary rounded-full hover:opacity-85 transition-all duration-150 text-white">Agregar evento en Google Calendar</a>
+        <a target="_blank" href="https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento" class="text-sm ps:text-base px-4 py-3 bg-secondary rounded-full hover:opacity-85 transition-all duration-150 text-white primary-button">Agregar evento en Google Calendar</a>
         <section>
             <h3 class="text-black text-sm text-center tracking-wide w-24 m-auto bg-white rounded-full mb-3">En espera</h3>
             <ul class="flex justify-around w-full text-white">
@@ -45,4 +44,3 @@ function format(value: number){
             </ul>
         </section>
     </div>
-</SectionContainer>

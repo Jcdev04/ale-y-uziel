@@ -24,6 +24,18 @@ const { title } = Astro.props;
 </html>
 <style is:global>
 	@font-face {
+		font-family: 'SFProUltralight';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Ultralight.otf") format("opentype");
+		font-weight: 100;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: 'SFProLight';
+		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Light.otf") format("opentype");
+		font-weight: 300;
+		font-style: normal;
+	}
+	@font-face {
 		font-family: 'SFProRegular';
 		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Regular.otf") format("opentype");
 		font-weight: 400;
@@ -51,4 +63,9 @@ const { title } = Astro.props;
 	@tailwind components;
 	@tailwind utilities;
 
+	.primary-button{
+		background-image: linear-gradient(0deg, #5E44FF 1.25%, #9281FF 100.38%);
+		box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.25);
+		z-index: 10;
+	}
 </style>

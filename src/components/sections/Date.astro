@@ -3,7 +3,7 @@ import SectionContainer from "../SectionContainer.astro"
 import CardCarrousel from "./DateCardCarrousel.astro"
 const imagesCarrousel = [
     { 
-        item: "/img/img-2-date.png", 
+        item: "/img/img-2-date.jpg", 
         title:"¿Cuándo?",
         subtitle:"27 de Abril 2024",
         buttons:{
@@ -15,7 +15,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-donde.png", 
+        item: "/img/img-2-donde.jpg", 
         title:"¿Dónde?",
         subtitle:"Hacienda San Juan Pueblilla / Zempoala, Hgo.",
         buttons:{
@@ -39,7 +39,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-saxo.png", 
+        item: "/img/img-2-saxo.jpg", 
         title:"Itinerario",
         subtitle:"Así será la boda",
         buttons:{
@@ -49,7 +49,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-coontigo.png", 
+        item: "/img/img-2-coontigo.jpg", 
         title:"¿Contamos contigo?",
         subtitle:"Aqui puedes confirmar o declinar",
         buttons:{
@@ -59,7 +59,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-dresscode.png", 
+        item: "/img/img-2-dresscode.jpg", 
         title:"Dresscode",
         subtitle:"Código de vestimenta e ideas para vestir",
         buttons:{
@@ -71,7 +71,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-alojamiento.png", 
+        item: "/img/img-2-alojamiento.jpg", 
         title:"Alojamiento",
         subtitle:"¿No tienes donde quedarte? Aquí te ayudamos",
         buttons:{
@@ -83,7 +83,7 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-regalos.png", 
+        item: "/img/img-2-regalos.jpg", 
         title:"Registro de Regalos",
         subtitle:"Evita repetir tu presente para los novios",
         buttons:{
@@ -98,11 +98,9 @@ const imagesCarrousel = [
 ---
 
 
-<SectionContainer bgColor="bg-black text-center">
-    
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div id="default-carousel" class="relative w-full my-10" data-carousel="slide">
     <!-- Carousel wrapper -->
-    <div class="relative  overflow-hidden rounded-lg h-[390px]">
+    <div class="relative overflow-hidden rounded-lg h-[480px]">
          {
             imagesCarrousel.map((item, index) => (
                 <CardCarrousel key={index} img={item.item} title={item.title} subtitle={item.subtitle} button={item.buttons}/>
@@ -138,4 +136,3 @@ const imagesCarrousel = [
         </span>
     </button>
 </div>
-</SectionContainer>

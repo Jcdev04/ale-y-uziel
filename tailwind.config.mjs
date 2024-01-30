@@ -10,6 +10,8 @@ export default {
         ps: "430px",
       },
       fontFamily: {
+        "sf-ultralight": ["SFProUltralight", "sans-serif"],
+        "sf-light": ["SFProLight", "sans-serif"],
         "sf-regular": ["SFProRegular", "sans-serif"],
         "sf-medium": ["SFProMedium", "sans-serif"],
         "sf-semibold": ["SFProSemibold", "sans-serif"],

@@ -1,0 +1,19 @@
+.slide {
+  background-image: url("/img/img-8-1.png");
+  animation: animate 20s infinite ease-in-out;
+  background-size: cover;
+  background-position: center;
+  border-radius: 30px;
+}
+
+@keyframes animate {
+  33% {
+    background-image: url("/img/img-8-2.png");
+  }
+  66% {
+    background-image: url("/img/img-8-3.png");
+  }
+  100% {
+    background-image: url("/img/img-8-1.png");
+  }
+}

@@ -1,10 +1,13 @@
 ---
 interface Card {
     bgColor: string;
+    padding: boolean;
 }
-const {bgColor} = Astro.props;
+const {bgColor, padding=true} = Astro.props;
 ---
-
-<div class={`${bgColor} px-5 flex flex-col items-center gap-10 py-4 relative w-full ps:w-[430px]`}>
-    <slot/>
+<div class={`${bgColor} w-full flex justify-center relative`}>
+    <div class={`px-5 ps:px-0 flex flex-col items-center gap-10 relative w-full ps:w-[430px] ${padding && "py-4"}`}>
+        <slot/>
+    </div>
+    <slot name="gradient"/>
 </div>

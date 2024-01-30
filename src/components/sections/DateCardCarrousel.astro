@@ -8,7 +8,6 @@ interface Names {
 
 const { title, subtitle, img,
     button } = Astro.props
-console.log(button);
 
 ---
 <div class="w-full h-full hidden duration-200 ease-in-out" data-carousel-item>
@@ -22,6 +21,6 @@ console.log(button);
                 <a target="_blank" href={button.derecha?.href} class="text-sm hover:opacity-80 transition-all duration-150">{button?.derecha.text}</a>
             </section>
         </div>
-        <section class="w-full bottom-0 absolute bg-gradient-to-t from-black to-transparent h-1/2"><section/>
+        <section class="w-full bottom-0 absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2"><section/>
     </div>
 </div>

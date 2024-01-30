@@ -6,16 +6,31 @@ import Date from '../components/sections/Date.astro';
 import Cuando from '../components/sections/Cuando.astro';
 import Donde from '../components/sections/Donde.astro';
 import Recuerdo from '../components/sections/Recuerdo.astro';
+import Comprometimos from '../components/sections2/Comprometimos.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import Galeria from '../components/sections2/Galeria.astro';
+import Itinerario from '../components/sections2/Itinerario.astro';
+import SimpleCarrousel from '../components/sections2/SimpleCarrousel.astro';
+import Confirmacion from "../components/sections3/Confirmacion.astro";
+import Dresscode from "../components/sections3/Dresscode.astro";
 ---
 
 <Layout title="Boda Ale y Uziel">
 	<Header/>
 	<div class="flex flex-col items-center">
 		<Hero />
-		<Date/>
-		<Cuando/>
+		<SectionContainer bgColor="bg-stone-950 text-center">
+			<Date/>
+			<Cuando/>
+		</SectionContainer>	
 		<Donde/>
 		<Recuerdo/>
+		<Comprometimos/>
+		<Galeria/>
+		<SimpleCarrousel/>
+		<Itinerario/>
+		<Confirmacion/>
+		<Dresscode/>
 	</div>
 </Layout>
 
