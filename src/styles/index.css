@@ -17,3 +17,9 @@
     background-image: url("/img/img-8-1.png");
   }
 }
+
+.confirmacion {
+  background-image: url("/img/img-2-coontigo.jpg");
+  background-size: 200%;
+  background-position: center;
+}

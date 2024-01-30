@@ -1,0 +1,34 @@
+---
+import SectionContainer from "../SectionContainer.astro";
+---
+<SectionContainer>
+    <div class="w-full h-full relative flex flex-col items-center text-white rounded-xl overflow-hidden">
+        <img class="object-cover object-center h-full" src="/img/img-2-regalos.jpg" alt="image carousel"/>
+        <div class="z-20 absolute w-full text-left p-5 bottom-16 space-y-3">
+            <div class="bg-white opacity-75  text-black px-5 py-3 rounded-2xl">
+                <p class="text-xs">Estaremos muy contentos de recibir tus regalos</p>
+                <section class="flex items-center gap-1">
+                    <h2 class="text-5xl">🎁</h2>
+                    <h2 class="text-3xl font-sf-bold"><span class="underline">Da click</span> en nuestras
+                    wishlist 🥰</h2>
+                </section>
+                <p class="text-xs">Recuerda pedirlo con tiempo</p>
+            </div>
+            <div class="space-x-5 flex">
+                <a class="flex flex-col items-center">
+                    <img class="border-white border-2 rounded-xl" src="/img/img-10-1.png" alt="">
+                    <p>Liverpool</p>
+                </a>
+                <a class="flex flex-col items-center">
+                    <img class="border-white border-2 rounded-xl" src="/img/img-10-2.png" alt="">
+                    <p>Amazon</p>
+                </a>
+            </div>
+        </div>
+        <section class="w-full bottom-0 absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2"></section>
+        <section class="w-full top-0 absolute bg-gradient-to-b from-stone-950 to-transparent h-1/2 text-center pt-10 space-y-2">
+            <h2 class="font-sf-bold text-3xl">Regalos</h2>
+            <p class="text-sm">Te dejamos aquí nuestra lista de deseos</p>
+        </section>
+    </div>
+</SectionContainer>

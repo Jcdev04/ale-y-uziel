@@ -1,17 +1,21 @@
 ---
-import SectionContainer from '../SectionContainer.astro'
-
+import "./src/styles/index.css"
 ---
-<SectionContainer>
-    <section class="text-center space-y-5">
-        <h2 class="font-sf-medium text-4xl">Confirma</h2>
-        <p class="text-xl"><strong>Tarjeta de RSVP</strong> | Se ruega la contestación <strong>antes del 27 de marzo 2024</strong></p>
-        <p class="text-sm underline text-primary">Regístrate, si aceptas asistir escribe el nombre del representante de la familia o grupo de amigos</p>
-    </section>
-    <input class="placeholder-slate-500 text-sm rounded-full py-4 px-6 bg-white opacity-90 w-full border-white" type="text" placeholder="Escribe tu nombre y guarda los cambios">
-    <section>
-        <input type="radio" placeholder="XD"/>
-    </section>
-    <p class="text-center">Si tienes alguna duda o alguno de tus acompañantes no podrá asistir, puedes comunicarte con la wedding planner, al final de esta pagina te dejaremos el contacto</p>
-    <button class="font-sf-light primary-button text-white px-12 py-4 text-sm rounded-full mt-7">Guardar cambios</button>
-</SectionContainer>
+<div class="w-full flex justify-center relative">
+    <div class="confirmacion mt-2">
+    <div class="px-5 flex flex-col items-center gap-10 relative w-full ps:w-[430px]  backdrop-blur-xl py-5">
+        <section class="text-center space-y-5">
+            <h2 class="font-sf-medium text-4xl">Confirma</h2>
+            <p class="text-xl"><strong>Tarjeta de RSVP</strong> | Se ruega la contestación <strong>antes del 27 de marzo 2024</strong></p>
+            <p class="text-sm underline text-primary">Regístrate, si aceptas asistir escribe el nombre del representante de la familia o grupo de amigos</p>
+        </section>
+        <input class="placeholder-slate-500 text-sm rounded-full py-4 px-6 bg-white opacity-90 w-full border-white" type="text" placeholder="Escribe tu nombre y guarda los cambios">
+        <section>
+            <input type="radio" placeholder="XD"/>
+        </section>
+        <p class="text-center">Si tienes alguna duda o alguno de tus acompañantes no podrá asistir, puedes comunicarte con la wedding planner, al final de esta pagina te dejaremos el contacto</p>
+        <button class="font-sf-light primary-button text-white px-12 py-4 text-sm rounded-full mt-7">Guardar cambios</button>
+    </div>
+      
+    </div>
+</div>
