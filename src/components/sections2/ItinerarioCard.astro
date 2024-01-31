@@ -5,15 +5,16 @@ interface Props {
     emoji: string;
     timeStart: string;
     timeEnd: string;
+    emojiSRC: string;
 }
-const {title, description, emoji, timeStart, timeEnd}= Astro.props;
+const {title, description, emoji, emojiSRC, timeStart, timeEnd}= Astro.props;
 ---
-<li class="bg-[#FBFBFF] bg-opacity-45  border-2 border-white rounded-lg flex gap-1 p-2 backdrop-blur-lg">
-    <h2 class="self-center text-7xl">{emoji}</h2>
+<li class="bg-[#FBFBFF] bg-opacity-45  border-2 border-white rounded-2xl flex gap-3 p-2 backdrop-blur-lg w-full">
+    <img class="w-14 ps:w-16 self-center" src={emojiSRC} alt={"Imagen del emoji "+emoji}/>
     <section class="flex flex-col gap-1">
-        <h3 class="text-xl font-sf-medium">{title}</h3>
-        <p class="text-[11px] ps:text-xs">{description}</p>
-        <p class="font-sf-semibold">{timeStart}</p>
+        <h3 class="text-base ps:text-xl font-sf-medium leading-5 py-1">{title}</h3>
+        <p class="text-[11px] ps:text-xs font-sf-light">{description}</p>
+        <p class="text-sm ps:text-base font-sf-semibold">{timeStart}</p>
     </section>
-    <h2 class="self-center text-[33px] font-sf-ultralight text-right ml-6">{timeEnd}</h2>
+    <h2 class="self-center text-2xl ps:text-3xl font-sf-ultralight text-right ml-0 ps:ml-6">{timeEnd}</h2>
 </li>
