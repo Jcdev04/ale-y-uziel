@@ -34,7 +34,7 @@ const Formulario = () => {
         Authorization:
           "Bearer " + "pat-na1-52fb212d-762f-4389-997e-08eddf9fd860",
       },
-      body: JSON.stringify(newContact),
+      body: JSON.stringify(request),
     }).then((response) => {
       console.log(response);
     });
