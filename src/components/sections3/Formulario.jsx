@@ -4,16 +4,51 @@ const Formulario = () => {
   const classBefore =
     "before:leading-3 before:pb-[3px] before:z-20 before:-translate-y-1/2 before:top-1/2 before:absolute before:left-4 before:font-sf-medium relative";
   const [isChecked, setIsChecked] = useState(true);
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
+
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
+
+  const createNewContact = (e) => {
+    e.preventDefault();
+    const newContact = {
+      nombre,
+      correo,
+      mensaje,
+      asistencia: isChecked ? "Asistiré" : "No asistiré",
+    };
+    const request = {
+      properties: {
+        newContact,
+      },
+    };
+
+    fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json",
+        Authorization:
+          "Bearer " + "pat-na1-52fb212d-762f-4389-997e-08eddf9fd860",
+      },
+      body: JSON.stringify(newContact),
+    }).then((response) => {
+      console.log(response);
+    });
+  };
+
   return (
-    <form className="flex flex-col gap-4 ">
+    <form className="flex flex-col gap-4 " onSubmit={createNewContact}>
       <section className={classBefore + " before:content-['Nombre:']"}>
         <input
           className=" placeholder-slate-500 text-sm rounded-full py-4 px-6 pl-20 bg-white opacity-90 w-full border-white"
           type="text"
           placeholder="Ej: Uziel"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
         />
       </section>
       <section className={classBefore + " before:content-['Correo:']"}>
@@ -21,11 +56,15 @@ const Formulario = () => {
           className="relative placeholder-slate-500 text-sm rounded-full py-4 px-6 pl-20 bg-white opacity-90 w-full border-white"
           type="text"
           placeholder="Ej: example@gmail.com"
+          value={correo}
+          onChange={(e) => setCorreo(e.target.value)}
         />
       </section>
       <textarea
         className="placeholder-slate-500 text-sm rounded-2xl py-4 px-6 bg-white opacity-90 w-full border-white min-h-32 max-h-32"
         placeholder="Algo que nos quieras decir"
+        value={mensaje}
+        onChange={(e) => setMensaje(e.target.value)}
       ></textarea>
       <label className="flex cursor-pointer select-none items-center justify-center">
         <div className="relative">
