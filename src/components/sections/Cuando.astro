@@ -1,6 +1,7 @@
 ---
-import SectionContainer from "../SectionContainer.astro"
+import { Image } from "astro:assets";
 import CardStructure from "./CuandoCardStructure.astro"
+import ImgPareja from "@assets/img/img-3-pareja.png"
 // Fecha actual
 const fechaActual = new Date();
 
@@ -27,7 +28,7 @@ function format(value: number){
         title="Nos casaremos el"
         description="Estaremos muy contentos de que puedas celebrar junto a nosotros esta fecha tan importante, no olvides agendarlo y agregarlo en tus pendientes. Queremos que la pases bien a nuestro lado 😊"
     >
-        <img class="w-full" slot="img" src="/img/img-3-pareja.png" alt="">
+        <Image id="cuando" class="h-full bg-center bg-cover object-cover relative" slot="img" src={ImgPareja} alt="Pareja Ale y Uziel" />
         <span slot="span" class="text-[#FBFF2A]"> 27 de Abril de 2024</span>
         <section class="w-full bottom-0 absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2"></section>
     </CardStructure>

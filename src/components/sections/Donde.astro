@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+import ImgDonde from "@assets/img/img-4-donde.png"
 import SectionContainer from "../SectionContainer.astro";
 import CuandoCardStructure from "./CuandoCardStructure.astro";
 ---
@@ -7,9 +9,9 @@ import CuandoCardStructure from "./CuandoCardStructure.astro";
         <section slot="gradient" class="top-[-1px] bg-gradient-to-b from-stone-950 to-transparent w-full absolute h-1/2"></section>
         <CuandoCardStructure subtitle="¿Dónde nos casaremos?" title="Hacienda San Juan Pueblilla Zempoala, Hgo." description="Toda la boda se llevará acabo en la hacienda, se encuentra a 30 minutos de Tulancingo, Hgo. y a 40 minutos de la CDMX. La ubicación se encuentra en el siguiente botón...">
             <h2 slot="title" class="text-[32px] font-medium">Hacienda San Juan Pueblilla Zempoala, Hgo.</h2>
-            <img class="w-full brightness-75 ps:brightness-100" slot="img" src="/img/img-4-donde.png" alt="Imagen Haciendo" />
+            <Image id="donde" class="h-full brightness-75 ps:brightness-100 bg-center bg-cover object-cover relative" slot="img" src={ImgDonde} alt="Imagen Haciendo" />
         </CuandoCardStructure>
-        <a href="https://maps.app.goo.gl/uGMix1kiRqDigsNX7" class="bg-secondary rounded-full px-16 py-2 text-white hover:opacity-85 duration-150 primary-button">
+        <a target="_blank" href="https://maps.app.goo.gl/uGMix1kiRqDigsNX7" class="bg-secondary rounded-full px-16 py-2 text-white hover:opacity-85 duration-150 primary-button">
             Ir a Google Maps
         </a>
 </SectionContainer>

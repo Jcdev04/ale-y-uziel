@@ -1,13 +1,22 @@
 ---
 import SectionContainer from "../SectionContainer.astro"
 import CardCarrousel from "./DateCardCarrousel.astro"
+import ImgDate from "@assets/img/img-2-date.jpg"
+import ImgDonde from "@assets/img/img-2-donde.jpg"
+import ImgPedida from "@assets/img/img-2-pedida.png"
+import ImgSaxo from "@assets/img/img-2-saxo.jpg"
+import ImgContigo from "@assets/img/img-2-coontigo.jpg"
+import ImgDresscode from "@assets/img/img-2-dresscode.jpg"
+import ImgAlojamiento from "@assets/img/img-2-alojamiento.jpg"
+import ImgRegalos from "@assets/img/img-2-regalos.jpg"
+
 const imagesCarrousel = [
     { 
-        item: "/img/img-2-date.jpg", 
+        item: ImgDate, 
         title:"¿Cuándo?",
         subtitle:"27 de Abril 2024",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#cuando",
             derecha:{
                 href: "https://www.google.com/calendar/render?action=TEMPLATE&text=Boda+Ale+y+Uziel&dates=20240427T070000-8:00/20240427T235900-9:00&details=Invitación+de+la+boda+de+Ale+y+Uziel&location=Lugar+del+Evento",
                 text: "Agendar en Google Calendar"
@@ -15,81 +24,81 @@ const imagesCarrousel = [
         }
     },
     { 
-        item: "/img/img-2-donde.jpg", 
+        item: ImgDonde, 
         title:"¿Dónde?",
         subtitle:"Hacienda San Juan Pueblilla / Zempoala, Hgo.",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#donde",
             derecha:{
-                href: "",
+                href: "https://maps.app.goo.gl/uGMix1kiRqDigsNX7",
                 text: "Ir a Google Maps"
             }
         }
     },
     { 
-        item: "/img/img-2-pedida.png", 
+        item: ImgPedida, 
         title:"Nuestra historia",
         subtitle:"Asi fue que nos comprometimos...",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#historia",
             derecha:{
-                href: "",
+                href: "https://www.tiktok.com/@uzielyale?is_from_webapp=1&sender_device=pc",
                 text: "Ir a TikTok"
             }
         }
     },
     { 
-        item: "/img/img-2-saxo.jpg", 
+        item: ImgSaxo, 
         title:"Itinerario",
         subtitle:"Así será la boda",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#itinerario",
             derecha:{
             }
         }
     },
     { 
-        item: "/img/img-2-coontigo.jpg", 
+        item: ImgContigo, 
         title:"¿Contamos contigo?",
         subtitle:"Aqui puedes confirmar o declinar",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#confirma",
             derecha:{
              }
         }
     },
     { 
-        item: "/img/img-2-dresscode.jpg", 
+        item: ImgDresscode, 
         title:"Dresscode",
         subtitle:"Código de vestimenta e ideas para vestir",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#dresscode",
             derecha:{
-                href: "",
+                href: "https://pin.it/39jlT0qfY",
                 text: "Ir a Pinterest"
             }
         }
     },
     { 
-        item: "/img/img-2-alojamiento.jpg", 
+        item: ImgAlojamiento, 
         title:"Alojamiento",
         subtitle:"¿No tienes donde quedarte? Aquí te ayudamos",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#reserva",
             derecha:{
-                href: "",
+                href: "https://wa.link/tmw6si",
                 text: "Reserva ahora"
             }
         }
     },
     { 
-        item: "/img/img-2-regalos.jpg", 
+        item: ImgRegalos, 
         title:"Registro de Regalos",
         subtitle:"Evita repetir tu presente para los novios",
         buttons:{
-            izquierdaHref: "",
+            izquierdaHref: "#regalos",
             derecha:{
-                href: "",
+                href: "https://www.amazon.com.mx/hz/wishlist/ls/HVFUN4YINE0G?ref_=wl_share",
                 text: "Reserva ahora"
             }
         }

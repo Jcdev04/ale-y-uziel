@@ -1,9 +1,11 @@
 ---
+import { Image } from "astro:assets";
 import SectionContainer from "../SectionContainer.astro";
+import Img91 from "@assets/img/img-9-1.png"
 ---
 <SectionContainer>
-    <div class="w-full h-full relative flex flex-col items-center text-white rounded-xl overflow-hidden">
-        <img class="object-cover object-center h-full w-full" src="/img/img-9-1.png" alt="image carousel"/>
+    <div id="reserva" class="w-full h-full relative flex flex-col items-center text-white rounded-xl overflow-hidden">
+        <Image class="object-cover object-center h-full w-full" src={Img91} alt="image carousel"/>
         <div class="z-20 absolute w-full bottom-5  text-center">
             <h3 class="font-bold text-3xl">Alojamiento</h3>
             <p class="text-sm mb-3">Si quieres dormir en la hacienda puedes reservar aquí</p>

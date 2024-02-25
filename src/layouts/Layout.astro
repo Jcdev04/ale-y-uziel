@@ -7,13 +7,20 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="ico" href="/4everbodas.ico" />
 		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content="Descubre nuestra historia, confirma tu asistencia a la boda el 27 de abril y comparte nuestra felicidad en esta página especial de invitación. ¡Únetenos en este momento tan especial de nuestras vidas!">
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://4everbodas.com/ale-y-uziel/">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Boda Ale y Uziel">
+		<meta property="og:description" content="Descubre nuestra historia, confirma tu asistencia a la boda el 27 de abril y comparte nuestra felicidad en esta página especial de invitación. ¡Únetenos en este momento tan especial de nuestras vidas!">
 		<title>{title}</title>
 	</head>
 	<body class="font-sf-regular">
@@ -25,38 +32,44 @@ const { title } = Astro.props;
 <style is:global>
 	@font-face {
 		font-family: 'SFProUltralight';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Ultralight.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Ultralight.otf") format("opentype");
 		font-weight: 100;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: 'SFProLight';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Light.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Light.otf") format("opentype");
 		font-weight: 300;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: 'SFProRegular';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Regular.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Regular.otf") format("opentype");
 		font-weight: 400;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: 'SFProMedium';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Medium.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Medium.otf") format("opentype");
 		font-weight: 500;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: 'SFProSemibold';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Semibold.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Semibold.otf") format("opentype");
 		font-weight: 600;
 		font-style: normal;
 	}
 	@font-face {
 		font-family: 'SFProBold';
-		src: url("/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Bold.otf") format("opentype");
+		src: url("../assets/fonts/San-Francisco-Pro-Fonts-master/SF-Pro-Display-Bold.otf") format("opentype");
 		font-weight: 700;
+		font-style: normal;
+	}
+	@font-face {
+		font-family: "JMHRegular";
+		src: url("../assets/fonts/JMH-Typewriter.otf") format("opentype");
+		font-weight: 400;
 		font-style: normal;
 	}
 	@tailwind base;

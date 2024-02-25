@@ -1,11 +1,19 @@
 ---
 import SectionContainer from "../SectionContainer.astro";
 import ItinerarioCard from "./ItinerarioCard.astro";
+import ImgRing from "@assets/img/emoji-ring.png";
+import ImgCocktail from "@assets/img/emoji-cocktail.png";
+import ImgStarTruck from "@assets/img/emoji-star-truck.png";
+import ImgBride from "@assets/img/emoji-bride.png";
+import ImgSpaghetti from "@assets/img/emoji-spaghetti.png";
+import ImgHeart from "@assets/img/emoji-heart.png";
+import ImgDancer from "@assets/img/emoji-dancer.png";
+
 const cards = [
     {
         title: "Nos casamos",
         emoji: "💍",
-        emojiSRC: "/img/emoji-ring.png",
+        emojiSRC: ImgRing,
         description: "Celebremos en la Hacienda San Juan Pueblilla",
         timeStart: "4:00p.m.",
         timeEnd: "5:30p.m.",
@@ -13,7 +21,7 @@ const cards = [
     {
         title: "Cocktail",
         emoji: "🍸",
-        emojiSRC: "/img/emoji-cocktail.png",
+        emojiSRC: ImgCocktail,
         description: "Es tiempo para socializar, saludar y enfiestarse",
         timeStart: "6:00p.m.",
         timeEnd: "7:15p.m.",
@@ -21,7 +29,7 @@ const cards = [
     {
         title: "Recepción al Banquete",
         emoji: "🤩",
-        emojiSRC:"/img/emoji-star-truck.png",
+        emojiSRC:ImgStarTruck,
         description: "Es tiempo para socializar, saludar y empezar a enfiestarse",
         timeStart: "6:45p.m.",
         timeEnd: "7:45p.m.",
@@ -29,7 +37,7 @@ const cards = [
     {
         title: "Entrada de los novios",
         emoji: "👰🏻‍♀️",
-        emojiSRC:"/img/emoji-bride.png",
+        emojiSRC: ImgBride,
         description: "Festejemos a los novios con un brindis",
         timeStart: "7:00p.m.",
         timeEnd: "8:00p.m.",
@@ -37,7 +45,7 @@ const cards = [
     {
         title: "Cena",
         emoji: "🍝",
-        emojiSRC:"/img/emoji-spaghetti.png",
+        emojiSRC: ImgSpaghetti,
         description: "Vámonos preparando para la fiesta",
         timeStart: "7:10p.m.",
         timeEnd: "8:15p.m.",
@@ -45,7 +53,7 @@ const cards = [
     {
         title: "Baile de esposos",
         emoji: "❤️",
-        emojiSRC:"/img/emoji-heart.png",
+        emojiSRC: ImgHeart,
         description: "Celebremos el amor con el primer baile en matrimonio",
         timeStart: "8:10p.m.",
         timeEnd: "9:30p.m.",
@@ -53,7 +61,7 @@ const cards = [
     {
         title: "Que siga la fiesta",
         emoji: "💃🏻",
-        emojiSRC:"/img/emoji-dancer.png",
+        emojiSRC: ImgDancer,
         description: "Y que se abra la pista, felices por el amor, celebremos con la víbora de la mar, el ramo, la liga, el pastel, mesa de dulces, etc... 💐 ✨🎂",
         timeStart: "9:15p.m.",
         timeEnd: "10:00p.m.",
@@ -61,7 +69,7 @@ const cards = [
 ];
 ---
 <div class="w-full flex justify-center relative flex-col items-center">
-    <section class="px-5 ps:px-0 flex flex-col items-center gap-10 relative w-full ps:w-[430px] py-4">
+    <section id="itinerario" class="px-5 ps:px-0 flex flex-col items-center gap-10 relative w-full ps:w-[430px] py-4">
     <section class="text-center w-full">
         <h2 class="font-sf-medium text-3xl">Itinerario</h2>
         <p class="font-sf-light text-balance">Nos sentiremos bien que seas puntual</p>

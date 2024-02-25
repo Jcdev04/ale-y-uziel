@@ -1,5 +1,8 @@
 ---
+import { Image } from "astro:assets";
 import SectionContainer from "../SectionContainer.astro";
+import ImgDresscode from "@assets/img/img-2-dresscode.jpg"
+
 const colores = [
     "bg-[#BCC2AB]",
     "bg-[#D9A3A2]",
@@ -9,7 +12,7 @@ const colores = [
 ]
 ---
 <SectionContainer bgColor="pt-24">
-    <section class="text-white rounded-2xl relative h-[646px]"> 
+    <section id="dresscode" class="text-white rounded-2xl relative h-[646px]"> 
         <div class={`w-full absolute -top-4 h-1/2 ${colores[0]} -z-10 rounded-2xl`}> 
         </div>
         <div class={`w-full absolute -top-8 h-1/2 ${colores[1]} -z-20 rounded-2xl`}> 
@@ -20,28 +23,18 @@ const colores = [
         </div>
         <div class={`w-full absolute -top-20 h-1/2 ${colores[4]} -z-50 rounded-2xl`}> 
         </div>
-        <img class="object-cover object-center h-full rounded-2xl" src="/img/img-2-dresscode.jpg " alt="">
-        <div class="z-20 absolute w-full top-10 text-center ">
+        <Image class="object-cover object-center h-full rounded-2xl" src={ImgDresscode} alt="Imagen Dresscode"/>
+        <div class="z-20 absolute w-full top-10 text-center">
             <h2 class="font-sf-bold text-3xl">Dresscode</h2>
             <p>
                 Código de vestimenta e ideas para vestir
             </p>
         </div>
         <div class="z-20 absolute w-full bottom-10 space-y-5 text-center px-5">
-            <section>
-                <div class="flex justify-center gap-1">
-                    {
-                        colores.map((color) => (
-                            <span class={`flex w-7 h-7 me-3 ${color} rounded-full `}></span>
-                        ))
-                    }
-                </div>
-                <p class="font-sf-semibold">Colores sugeridos</p>
-            </section>
-            <p class="">Te sugerimos estos colores para vestidos, y abajo te dejamos una colección en Pinterest para que puedas tener un panorama mas amplio de colores y formas de vestidos</p>
+            <p class="">Aquí abajo te dejamos una colección en Pinterest para que puedas tener un panorama más amplio de colores y formas de vestidos</p>
             <p class="text-2xl font-sf-semibold">La única regla es <span class="text-[#B3FF12]">no</span> vestir color blanco y color rojo</p>
             <section class="z-20 flex justify-center items-center gap-3">
-                <a href="https://pin.it/39jlT0qfY" class=" text-sm  rounded-full transition-all duration-150 hover:opacity-80 primary-button  px-16 py-3 font-sf-light">Ir a pinterest</a>
+                <a target="_blank" href="https://pin.it/39jlT0qfY" class=" text-sm  rounded-full transition-all duration-150 hover:opacity-80 primary-button  px-16 py-3 font-sf-light">Ir a pinterest</a>
             </section>
         </div>
         <section class="w-full bottom-0 absolute bg-gradient-to-t from-stone-950 to-transparent h-1/2 rounded-b-xl"></section>

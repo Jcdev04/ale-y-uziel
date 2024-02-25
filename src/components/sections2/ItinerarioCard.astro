@@ -1,16 +1,18 @@
 ---
+import { Image } from 'astro:assets';
+
 interface Props {
     title: string;
     description: string;
     emoji: string;
     timeStart: string;
     timeEnd: string;
-    emojiSRC: string;
+    emojiSRC: any;
 }
 const {title, description, emoji, emojiSRC, timeStart, timeEnd}= Astro.props;
 ---
 <li class="bg-[#FBFBFF] bg-opacity-45  border-2 border-white rounded-2xl flex gap-3 p-2 backdrop-blur-lg w-full">
-    <img class="w-14 ps:w-16 self-center" src={emojiSRC} alt={"Imagen del emoji "+emoji}/>
+    <Image class="w-14 ps:w-16 self-center" src={emojiSRC} alt={"Imagen del emoji "+emoji}/>
     <section class="flex flex-col gap-1">
         <h3 class="text-base ps:text-xl font-sf-medium leading-5 py-1">{title}</h3>
         <p class="text-[11px] ps:text-xs font-sf-light">{description}</p>

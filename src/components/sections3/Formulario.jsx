@@ -1,3 +1,4 @@
+import { log } from "node_modules/astro/dist/core/logger/core";
 import { useState } from "react";
 
 const Formulario = () => {
@@ -20,24 +21,38 @@ const Formulario = () => {
       mensaje,
       asistencia: isChecked ? "Asistiré" : "No asistiré",
     };
-    const request = {
-      properties: {
-        newContact,
-      },
-    };
+    console.log(newContact.asistencia);
+    //Regex for email
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!regex.test(correo) || !nombre || !mensaje) {
+      alert("Por favor, ingresar correctamente los datos");
+      return;
+    }
 
-    fetch("https://api.hubapi.com/crm/v3/objects/contacts", {
+    fetch("https://connect.mailerlite.com/api/subscribers", {
       method: "POST",
-
       headers: {
+        Authorization: `Bearer ${import.meta.env.PUBLIC_APIKEY}`,
         "Content-Type": "application/json",
-        Authorization:
-          "Bearer " + "pat-na1-52fb212d-762f-4389-997e-08eddf9fd860",
+        Accept: "application/json",
       },
-      body: JSON.stringify(request),
-    }).then((response) => {
-      console.log(response);
-    });
+      body: JSON.stringify({
+        email: newContact.correo,
+        fields: {
+          name: newContact.nombre,
+          message: newContact.mensaje,
+          assitance: newContact.asistencia,
+          groups: [import.meta.env.PUBLIC_GROUPKEY],
+        },
+      }),
+    })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    alert("Enviado correctamente");
   };
 
   return (

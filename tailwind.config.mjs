@@ -16,6 +16,7 @@ export default {
         "sf-medium": ["SFProMedium", "sans-serif"],
         "sf-semibold": ["SFProSemibold", "sans-serif"],
         "sf-bold": ["SFProBold", "sans-serif"],
+        "jmh-regular": ["JMHRegular", "sans-serif"],
       },
       colors: {
         primary: "#0050EF",

@@ -1,18 +1,13 @@
 ---
-
+import AuHeader from "@assets/img/au-header.png"
+import HamburguerHeader from "@assets/img/hamburguer-header.png"
+import { Image } from "astro:assets"
 ---
 
 <header class="container m-auto px-3">
-    <ul class="flex items-center justify-between">
+    <ul class="flex items-center justify-evenly py-2">
         <li>
-            <img class="w-full" src="/img/au-header.png" alt="f">
-        </li>
-        <li class="flex flex-col text-center py-2">
-            <h2 class="font-sf-medium text-2xl leading-none"><strong>Ale</strong> & Uziel</h2>
-            <p class="leading-tight text-xs tracking-widest font-sf-medium">NUESTRA BODA</p>
-        </li>
-        <li>
-            <img class="w-full" src="/img/hamburguer-header.png" alt="f">
+            <Image class="w-12" src={AuHeader} alt="f">
         </li>
     </ul>
 </header>
